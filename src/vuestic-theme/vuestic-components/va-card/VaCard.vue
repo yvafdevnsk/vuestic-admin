@@ -22,7 +22,7 @@
         <slot name="header">
           <div
             class="va-card__header-title"
-            :style="{color: this.titleOnImage ? 'white' : this.$themes.info}"
+            :style="{color: this.$themes.info}"
           >
             {{ title }}
           </div>
@@ -157,10 +157,14 @@ export default {
 
     &--over {
       position: absolute;
-      padding-top: 56%;
+      padding-top: 56%; // here
       width: 100%;
       top: 0;
       left: 0;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 0;
+      }
 
       &:last-child {
         height: 100%;
@@ -198,10 +202,14 @@ export default {
   }
 
   &__image {
-     padding-bottom: 56%;
+     padding-bottom: 56%; // here
      position: relative;
      height: auto;
      min-height: 100%;
+
+    @include media-breakpoint-up(md) {
+      padding-bottom: 0;
+    }
 
     img {
       position: absolute;

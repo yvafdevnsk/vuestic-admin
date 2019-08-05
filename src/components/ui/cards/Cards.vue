@@ -67,7 +67,7 @@
             image="https://picsum.photos/300/200/?image=898"
             :title="$t('cards.title.withCustomTitleOnImage')"
           >
-            <va-button slot="header" class="ma-0">
+            <va-button slot="header">
               Read More
             </va-button>
           </va-card>
